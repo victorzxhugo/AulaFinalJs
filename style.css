@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 5%;
+    background-color: black;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link > a{
+    color: white;
+    font-size: 28px;
+}
+
+section:nth-child(1){
+    height: 100vh;
+}
+
+section:nth-child(2){
+    height: 100vh;
+}
+
+section:nth-child(3){
+    height: 100vh;
+    background-color: yellow;
+}
+
+.spin{
+    margin: 40px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 15px solid black;
+    border-top: 15px solid red;
+    animation: carregamento 1s linear infinite;
+}
+
+@keyframes carregamento{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.carrousel{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    animation: photo 6s infinite alternate-reverse;
+}
+
+@keyframes photo{
+    0%{
+        background-image: url("https://source.unsplash.com/500x500/?hero");
+        border: 10px solid green;
+    }
+    50%{
+        background-image: url("https://source.unsplash.com/500x500/?beach");
+        border: 10px solid orangered;
+
+    }
+    100%{
+        background-image: url("https://source.unsplash.com/500x500/?car");
+        border: 10px solid plum;
+
+    }
+}
+
+.bars{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+aside{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+
+aside > a {
+    color: white;
+    font-size: 32px;
+    padding: 25px 14px;
+    display: block;
+}
+
+.active-section{
+    background-color: gray;
+
+}
+
+.active-bars{
+    left: 0;
+
+}
